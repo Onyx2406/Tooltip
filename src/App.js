@@ -17,13 +17,15 @@ class App extends Component {
       radius: 5,
       tooltipWidth: 200,
       arrowHeight: 5,
-      image: null,
+      image: localStorage.getItem('image') || null,
     };
   }
 
   handleInputChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
+    }, () => {
+      localStorage.setItem(event.target.name, event.target.value);
     });
   }
 
@@ -186,6 +188,10 @@ class App extends Component {
         <div className="menu-option">
           <label htmlFor="arrowHeight">Arrow height:</label>
           <input id="arrowHeight" type="number" name="arrowHeight" onChange={this.handleInputChange} />
+        </div>
+        <div className="menu-option">
+          <label htmlFor="image">Image URL:</label>
+          <input id="image" type="text" name="image" onChange={this.handleInputChange} />
         </div>
       </form>
 
