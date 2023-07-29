@@ -24,7 +24,7 @@ One of the standout features of this project is that the data used to build the 
 - HTML
 
 ## Pics
-![image](https://github.com/Onyx2406/Tooltip/assets/32770175/77423fb1-795d-46b2-9d34-0f9bcd8fbafa)
+![image](https://github.com/Onyx2406/Tooltip/assets/32770175/1b6db46b-6860-4892-a1e7-9f7fe01bad54)
 
 ## Getting Started
 
