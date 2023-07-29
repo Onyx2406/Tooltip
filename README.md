@@ -23,6 +23,9 @@ One of the standout features of this project is that the data used to build the 
 - CSS
 - HTML
 
+## Pics
+![image](https://github.com/Onyx2406/Tooltip/assets/32770175/77423fb1-795d-46b2-9d34-0f9bcd8fbafa)
+
 ## Getting Started
 
 1. Clone the repository.
