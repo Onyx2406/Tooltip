@@ -7,34 +7,48 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      target: localStorage.getItem('target') || "top",
-      text: localStorage.getItem('text') || "",
-      fontSize: Number(localStorage.getItem('fontSize')) || 14,
-      padding: Number(localStorage.getItem('padding')) || 10,
-      textColor: localStorage.getItem('textColor') || "#000000",
-      bgColor: localStorage.getItem('bgColor') || "#FFFFFF",
-      radius: Number(localStorage.getItem('radius')) || 5,
-      tooltipWidth: Number(localStorage.getItem('tooltipWidth')) || 200,
-      arrowHeight: Number(localStorage.getItem('arrowHeight')) || 5,
-      image: localStorage.getItem('image') || null,
+      targetButton: 'button-top-left',
+      target: "top",
+      text: "",
+      fontSize: 14,
+      padding: 10,
+      textColor: "#000000",
+      bgColor: "#FFFFFF",
+      radius: 5,
+      tooltipWidth: 200,
+      arrowHeight: 5,
+      image: null,
     };
   }
 
   handleInputChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
-    }, () => {
-      localStorage.setItem(event.target.name, event.target.value);
     });
   }
 
   render() {
-    const { target, text, fontSize, padding, textColor, bgColor, radius, tooltipWidth, arrowHeight, image } = this.state;
+    const { targetButton, target, text, fontSize, padding, textColor, bgColor, radius, tooltipWidth, arrowHeight, image } = this.state;
 
     return (
       <>
         <div className="styl-50 tc styl-5">
           <h1> Tooltip Project by Yash Sancheti</h1>
+        </div>
+
+        <div className="dropdown">
+            <label htmlFor="targetButton">Target Button:</label>
+            <select 
+              id="targetButton" 
+              value={this.state.targetButton} 
+              onChange={e => this.setState({ targetButton: e.target.value })}
+            >
+              <option value="button-top-left">Top Left</option>
+              <option value="button-top-right">Top Right</option>
+              <option value="button-bottom-left">Bottom Left</option>
+              <option value="button-bottom-right">Bottom Right</option>
+              <option value="button-center">Center</option>
+            </select>
         </div>
 
         <div className="dropdown">
@@ -54,6 +68,7 @@ class App extends Component {
         <div className="mobile-screen">
           <Button 
             className="button-top-left" 
+            targetButton={targetButton}
             position={target} 
             text={text} 
             fontSize={fontSize} 
@@ -67,6 +82,7 @@ class App extends Component {
           />
           <Button 
             className="button-top-right" 
+            targetButton={targetButton}
             position={target} 
             text={text} 
             fontSize={fontSize} 
@@ -80,6 +96,7 @@ class App extends Component {
           />
           <Button 
             className="button-bottom-left" 
+            targetButton={targetButton}
             position={target} 
             text={text} 
             fontSize={fontSize} 
@@ -93,6 +110,7 @@ class App extends Component {
           />
           <Button 
             className="button-bottom-right" 
+            targetButton={targetButton}
             position={target} 
             text={text} 
             fontSize={fontSize} 
@@ -106,6 +124,7 @@ class App extends Component {
           />
           <Button 
             className="button-center" 
+            targetButton={targetButton}
             position={target} 
             text={text} 
             fontSize={fontSize} 
@@ -167,10 +186,6 @@ class App extends Component {
         <div className="menu-option">
           <label htmlFor="arrowHeight">Arrow height:</label>
           <input id="arrowHeight" type="number" name="arrowHeight" onChange={this.handleInputChange} />
-        </div>
-        <div className="menu-option">
-          <label htmlFor="image">Image URL:</label>
-          <input id="image" type="text" name="image" onChange={this.handleInputChange} />
         </div>
       </form>
 
