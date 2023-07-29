@@ -1,0 +1,153 @@
+body {
+  background: url('https://source.unsplash.com/random') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+.mobile-screen {
+  width: 360px;
+  height: 640px;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5); /* dark translucent background */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  color: #fff; /* white text */
+}
+
+.button-top-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.button-top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.button-bottom-left {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.button-bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.button-center {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-10%, -10%);
+}
+
+button {
+  border: none;
+  background: linear-gradient(to bottom right, #3498db, #9b59b6);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100px;
+  height: 40px;
+  font-size: 12px;
+}
+
+button:hover {
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+button:active {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+}
+
+.menu-option {
+  width: 300px;
+  padding: 10px;
+  margin: 0 auto 10px;
+  background: rgba(230, 230, 230, 0.8); /* semi-transparent background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-option label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.menu-option input {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.menu-option input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(52, 152, 219, 0.5);
+}
+
+.dropdown {
+  width: 300px;
+  padding: 20px;
+  margin: 0 auto 20px;
+  background: rgba(230, 230, 230, 0.8); /* semi-transparent background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.dropdown select {
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="%23000000" viewBox="0 0 20 20"><path d="M5.172 5.172a.5.5 0 0 1 .707 0l4.95 4.95 4.95-4.95a.5.5 0 1 1 .707.707l-5.303 5.303a.5.5 0 0 1-.708 0L5.172 5.879a.5.5 0 1 1 .707-.707z"/></svg>') no-repeat right .75rem center/1em auto;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.dropdown select:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(52, 152, 219, 0.5);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 25px;
+}

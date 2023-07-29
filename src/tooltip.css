@@ -1,0 +1,81 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltiptext {
+    background-color: #333;
+    position: absolute;
+    z-index: 1;
+    transition: visibility 0.2s;
+    border-radius: 5px;  /* added border-radius for round corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* added box-shadow for more depth */
+  }
+  
+  .top {
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 15px;  /* increased margin for more space */
+    transform: translateX(-50%);
+  }
+  
+  .bottom {
+    top: 100%;
+    left: 50%;
+    margin-top: 15px;  /* increased margin for more space */
+    transform: translateX(-50%);
+  }
+  
+  .left {
+    right: 100%;
+    top: 50%;
+    margin-right: 15px;  /* increased margin for more space */
+    transform: translateY(-50%);
+  }
+  
+  .right {
+    left: 100%;
+    top: 50%;
+    margin-left: 15px;  /* increased margin for more space */
+    transform: translateY(-50%);
+  }
+  
+  .top::after,
+  .bottom::after,
+  .left::after,
+  .right::after {
+    border-color: #333 transparent transparent transparent;
+    content: " ";
+    position: absolute;
+    border-width: 8px;
+    border-style: solid;
+  }
+  
+  .top::after {
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-color: black transparent transparent transparent;
+  }
+  
+  .bottom::after {
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-color: transparent transparent black transparent;
+  }
+  
+  .left::after {
+    left: 100%;
+    top: 50%;
+    margin-top: -5px;
+    border-color: transparent transparent transparent black;
+  }
+  
+  .right::after {
+    right: 100%;
+    top: 50%;
+    margin-top: -5px;
+    border-color: transparent black transparent transparent;
+  }
+  
